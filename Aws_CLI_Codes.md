@@ -1,7 +1,9 @@
 # AWS Cloud
 ## EC2 (Elastic Compute Cloud)
-''''
-- aws ec2 describe-instances – List all instances
+````
+nano example.txt
+````
+aws ec2 describe-instances – List all instances
 ''''
 - aws ec2 start-instances --instance-ids <id> – Start an instance
 - aws ec2 stop-instances --instance-ids <id> – Stop an instance
