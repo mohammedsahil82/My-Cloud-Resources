@@ -1,32 +1,3 @@
-# AWS Cloud
-
-## EC2 (Elastic Compute Cloud)
-
-List all instances
-````
-aws ec2 describe-instances
-````
-Start an instance
-````
-aws ec2 start-instances --instance-ids <id>
-````
-Stop an instance
-````
-aws ec2 stop-instances --instance-ids <id>
-````
-Terminate an instance
-````
-aws ec2 terminate-instances --instance-ids <id>
-````
-Create a key pair
-````
-aws ec2 create-key-pair --key-name <name>
-````
-List security groups
-````
-aws ec2 describe-security-groups – List security groups
-````
-
 # S3 (Simple Storage Service)
 
 - aws s3 ls – List buckets
@@ -37,7 +8,7 @@ aws ec2 describe-security-groups – List security groups
 - aws s3 sync <local-dir> s3://<bucket>/ – Sync local and S3
 
 IAM (Identity and Access Management)
-● aws iam list-users – List IAM users
+- aws iam list-users – List IAM users
 ● aws iam create-user --user-name <name> – Create a user
 - aws iam attach-user-policy --user-name <name> --policy-arn <policy> – Attach a policy
 ● aws iam list-roles – List IAM roles
