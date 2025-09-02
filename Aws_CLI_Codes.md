@@ -26,3 +26,14 @@ List security groups
 ````
 aws ec2 describe-security-groups – List security groups
 ````
+
+# S3 (Simple Storage Service)
+
+- aws s3 ls – List buckets
+- aws s3 mb s3://<bucket> – Create a bucket
+- aws s3 cp <file> s3://<bucket>/ – Upload a file
+- aws s3 rm s3://<bucket>/<file> – Delete a file
+- aws s3 rb s3://<bucket> --force – Delete a bucket
+- aws s3 sync <local-dir> s3://<bucket>/ – Sync local and S3
+
+
