@@ -7,15 +7,15 @@
 - aws s3 rb s3://<bucket> --force – Delete a bucket
 - aws s3 sync <local-dir> s3://<bucket>/ – Sync local and S3
 
-IAM (Identity and Access Management)
-- aws iam list-users – List IAM users
+# IAM (Identity and Access Management)
+● aws iam list-users – List IAM users
 ● aws iam create-user --user-name <name> – Create a user
-- aws iam attach-user-policy --user-name <name> --policy-arn <policy> – Attach a policy
+● aws iam attach-user-policy --user-name <name> --policy-arn <policy> – Attach a policy
 ● aws iam list-roles – List IAM roles
 ● aws iam create-role --role-name <name> --assume-role-policy-document file://policy.json – Create a role
 ● aws iam list-policies – List policies
 
-VPC (Virtual Private Cloud)
+# VPC (Virtual Private Cloud)
 ● aws ec2 describe-vpcs – List VPCs
 ● aws ec2 create-vpc --cidr-block <CIDR> – Create a VPC
 ● aws ec2 delete-vpc --vpc-id <id> – Delete a VPC
