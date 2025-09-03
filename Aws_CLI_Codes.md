@@ -159,9 +159,9 @@
 
 # Manage Outpost Resources
 
-aws outposts list-sites # List all Outpost sites
-aws outposts list-orders # List Outpost orders
-aws outposts list-outpost-instances --outpost-id <outpost-id> # List EC2 instances in an Outpost
+- aws outposts list-sites # List all Outpost sites
+- aws outposts list-orders # List Outpost orders
+- aws outposts list-outpost-instances --outpost-id <outpost-id> # List EC2 instances in an Outpost
 
 # Deploy and Configure Outposts
 
