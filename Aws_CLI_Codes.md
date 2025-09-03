@@ -153,9 +153,9 @@
 
 ## List and Describe Outposts
 
-- aws outposts list-outposts --List all AWS Outposts
-- aws outposts get-outpost --outpost-id <outpost-id> --Get details of a specific Outpost
-- aws outposts get-outpost-instance-types --outpost-id <outpost-id> --List instance types in an Outpost
+- aws outposts list-outposts # List all AWS Outposts
+- aws outposts get-outpost --outpost-id <outpost-id> # Get details of a specific Outpost
+- aws outposts get-outpost-instance-types --outpost-id <outpost-id> # List instance types in an Outpost
 
 # Manage Outpost Resources
 
@@ -165,33 +165,46 @@
 
 # Deploy and Configure Outposts
 
-aws outposts create-order --line-items "[{\"catalogItemId\": \"item-id\", \"quantity\": 1}]" --outpost-id <outpost-id> # Order an Outpost
-aws outposts update-outpost --outpost-id <outpost-id> --name <new-name> # Update Outpost configuration
+- aws outposts create-order --line-items "[{\"catalogItemId\": \"item-id\", \"quantity\": 1}]" --outpost-id <outpost-id> # Order an Outpost
+- aws outposts update-outpost --outpost-id <outpost-id> --name <new-name> # Update Outpost configuration
 
 # Networking and Storage on Outposts
 
-aws outposts list-outpost-network-devices --outpost-id <outpost-id> # List network devices in an Outpost
-aws s3 ls --outpost-id <outpost-id> # List S3 buckets on an Outpost
-aws s3 mb s3://<bucket-name> --outpost-id <outpost-id> # Create an S3 bucket in Outpost
+- aws outposts list-outpost-network-devices --outpost-id <outpost-id> # List network devices in an Outpost
+- aws s3 ls --outpost-id <outpost-id> # List S3 buckets on an Outpost
+- aws s3 mb s3://<bucket-name> --outpost-id <outpost-id> # Create an S3 bucket in Outpost
 
 # Deploy EC2 Instances in Outposts
-aws ec2 run-instances --image-id <ami-id> --instance-type <type> --subnet-id <outpost-subnet-id> # Launch an EC2 instance in Outpost
+
+- aws ec2 run-instances --image-id <ami-id> --instance-type <type> --subnet-id <outpost-subnet-id> # Launch an EC2 instance in Outpost
+
 # Automate Outpost Deployments with CloudFormation
-aws cloudformation deploy --template-file outpost-config.yml --stack-name my-outpost-stack # Deploy Outpost resources using CloudFormation
+
+- aws cloudformation deploy --template-file outpost-config.yml --stack-name my-outpost-stack # Deploy Outpost resources using CloudFormation
+
 # Monitor Outposts with CloudWatch
-aws cloudwatch list-metrics --namespace AWS/Outposts # List Outpost-related CloudWatch metrics
-aws cloudwatch get-metric-data --metric-name CPUUtilization --namespace AWS/Outposts # Monitor CPU usage of Outpost instances
+
+- aws cloudwatch list-metrics --namespace AWS/Outposts # List Outpost-related CloudWatch metrics
+- aws cloudwatch get-metric-data --metric-name CPUUtilization --namespace AWS/Outposts # Monitor CPU usage of Outpost instances
+
 # Integrate Outposts with CI/CD
-aws codepipeline list-pipelines # List all CI/CD pipelines
-aws codepipeline start-pipeline-execution --name <pipeline-name> # Start a deployment pipeline for Outposts
-aws codebuild start-build --project-name <build-project> # Start a build process for Outposts workloads
-aws deploy create-deployment --application-name <app-name> --deployment-group-name <group-name> --s3-location bucket=<bucket-name>,key=<app.zip>,bundleType=zip # Deploy an application to an Outpost
-# Security and Compliance for Outposts
-aws iam create-role --role-name <role-name> --assume-role-policy-document file://policy.json # Create an IAM role for Outpost management
-aws secretsmanager list-secrets # List stored secrets for Outposts
-aws secretsmanager get-secret-value --secret-id <secret-name> # Retrieve a stored secret
-aws cloudtrail describe-trails # List AWS CloudTrail logs for security auditing
-aws guardduty list-findings # Detect security threats related to Outposts
+
+- aws codepipeline list-pipelines # List all CI/CD pipelines
+- aws codepipeline start-pipeline-execution --name <pipeline-name> # Start a deployment pipeline for Outposts
+- aws codebuild start-build --project-name <build-project> # Start a build process for Outposts workloads
+- aws deploy create-deployment --application-name <app-name> --deployment-group-name <group-name> --s3-location bucket=<bucket-name>,key=<app.zip>,bundleType=zip
+
+# Deploy an application to an Outpost
+
+## Security and Compliance for Outposts
+
+- aws iam create-role --role-name <role-name> --assume-role-policy-document file://policy.json # Create an IAM role for Outpost management
+- aws secretsmanager list-secrets # List stored secrets for Outposts
+- aws secretsmanager get-secret-value --secret-id <secret-name> # Retrieve a stored secret
+- aws cloudtrail describe-trails # List AWS CloudTrail logs for security auditing
+- aws guardduty list-findings # Detect security threats related to Outposts
+
 # Delete or Deactivate an Outpost
-aws outposts delete-outpost --outpost-id <outpost-id> # Delete an Outpost (must be empty)
-aws outposts cancel-order --order-id <order-id> # Cancel an Outpost order before delivery
+
+- aws outposts delete-outpost --outpost-id <outpost-id> # Delete an Outpost (must be empty)
+- aws outposts cancel-order --order-id <order-id> # Cancel an Outpost order before delivery
