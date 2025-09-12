@@ -3,6 +3,7 @@
 ## In instance CLI
 
 ls    # To see files 
+
 sudo -i  # To direct root
 
 
